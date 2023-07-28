@@ -1,6 +1,6 @@
 //------1 задание------
 
-let cube = Number(prompt('Введите число'));
+let cube = Number(prompt('Введите число которое хотите возвести в куб'));
 
 
 getCubeNumber(cube);
@@ -21,7 +21,7 @@ function getCubeNumber (num) {
 
 //------2 задание------
 
-let salary = Number(prompt('Введите число'));
+let salary = Number(prompt('Введите зарплату'));
 
 
 getSalary(salary);
