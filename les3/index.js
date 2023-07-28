@@ -83,7 +83,13 @@ let param2 = Number(prompt('Введите число'));
 
 
 console.log(`${param1} + ${param2} = ${sum(param1, param2)}`);
-console.log(`${param1} - ${param2} = ${diff(param1, param2)}`);
+
+if (param1 > param2) {
+    console.log(`${param1} - ${param2} = ${diff(param1, param2)}`);
+} else {
+    console.log(`${param2} - ${param1} = ${diff(param1, param2)}`);
+}
+
 console.log(`${param1} * ${param2} = ${multi(param1, param2)}`);
 console.log(`${param1} : ${param2} = ${div(param1, param2)}`);
 
