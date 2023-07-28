@@ -2,7 +2,9 @@
 
 let cube = Number(prompt('Введите число'));
 
+
 getCubeNumber(cube);
+
 
 function getCubeNumber (num) {
 
@@ -21,7 +23,9 @@ function getCubeNumber (num) {
 
 let salary = Number(prompt('Введите число'));
 
+
 getSalary(salary);
+
 
 function getSalary (num) {
 
@@ -44,7 +48,9 @@ let number2 = Number(prompt('Введите второе число'));
 
 let number3 = Number(prompt('Введите третье число'));
 
+
 findMax(number1, number2, number3);
+
 
 function findMax(num1, num2, num3) {
     
