@@ -34,6 +34,8 @@ function getSalary (num) {
     
 }
 
+
+
 //------3 задание------
 
 let number1 = Number(prompt('Введите первое число'));
