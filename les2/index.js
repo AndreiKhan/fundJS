@@ -12,7 +12,7 @@ console.log(num2 >= 3 ? `Число ${num2} равно или больше 3` : 
 
 let test = true;
 
-test === true ? console.log('+++') : console.log('---');
+console.log(test === true ? '+++' : '---');
 
 
 
