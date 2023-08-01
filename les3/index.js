@@ -1,27 +1,32 @@
 //------1 задание------
 
-let cube = Number(prompt('Введите число которое хотите возвести в куб'));
+let cube = prompt('Введите число которое хотите возвести в куб');
 
 
-getCubeNumber(cube);
+console.log(`${cube} в кубе = ${getCubeNumber(cube)}`);
 
 
 function getCubeNumber (num) {
 
-    if (num) {
-        console.log(`${num} в кубе = ${num ** 3}`);
-    }
-    else {
-        num = 0;
-        console.log(`${num} в кубе = ${num ** 3}`);
-    }
+
+    const result = num ** 3 || 0;
+
+    return result
+
+    // if (num) {
+    //     console.log(`${num} в кубе = ${num ** 3}`);
+    // }
+    // else {
+    //     num = 0;
+    //     console.log(`${num} в кубе = ${num ** 3}`);
+    // }
 }
 
 
 
 //------2 задание------
 
-let salary = Number(prompt('Введите зарплату'));
+let salary = prompt('Введите зарплату');
 
 
 getSalary(salary);
@@ -35,7 +40,6 @@ function getSalary (num) {
     } else {
         console.log(`Введенно не число`);
     }
-    
 }
 
 
@@ -54,24 +58,8 @@ findMax(number1, number2, number3);
 
 function findMax(num1, num2, num3) {
     
-    if (num1 > num2) {
+    return Math.max(num1, num2, num3);
 
-        if (num1 > num3) {
-            console.log(`${num1} самое большое число`);
-
-        } else {
-            console.log(`${num3} самое большое число`);
-        }
-
-    } else {
-
-        if (num2 > num3) {
-            console.log(`${num2} самое большое число`);
-
-        } else {
-            console.log(`${num3} самое большое число`);
-        }
-    }
 }
 
 
