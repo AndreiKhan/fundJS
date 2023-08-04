@@ -19,19 +19,21 @@ for (let i = 0; i < 11; i++) {
 
 //------2 задание------
 
-let numbers = [1, 2, 3, 4, 5, 6, 7]
+const numbers = [1, 2, 3, 4, 5, 6, 7];
 
 console.log(numbers);
 
-numbers.splice(3, 2);
+const numbers2 = numbers.slice();
 
-console.log(numbers);
+numbers2.splice(3, 2);
+
+console.log(numbers2);
 
 
 
 //------3 задание------
 
-let randomNumbers = new Array(5);
+const randomNumbers = new Array(5);
 
 let sum = 0;
 
