@@ -104,9 +104,9 @@ const productsPhoto = [
     }
 ];
 
-const productsWithPhoto = productsPhoto.filter(product => product.photos).filter(product => product.photos.length !== 0);
+const productsWithPhoto = productsPhoto.filter(product => 'photos' in product && product.photos.length !== 0);
 
-const productsSortPrice = productsPhoto.slice().sort((a, b) => a.price > b.price ? 1 : -1);
+const productsSortPrice = productsPhoto.slice().sort((a, b) => a.price - b.price);
 
 console.log(productsPhoto);
 console.log(productsWithPhoto);
@@ -119,10 +119,9 @@ console.log(productsSortPrice);
 const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
 
-const days = {};
-
-for (let i = 0; i < 7; i++) {
-    days[en[i]] = ru[i];
-}
+const days = en.reduce((result, key, index) => {
+    result[key] = ru[index];
+    return result;
+}, {});
 
 console.log(days);

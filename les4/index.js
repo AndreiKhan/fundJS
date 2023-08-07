@@ -23,24 +23,21 @@ console.log(numbers2);
 
 //------3 задание------
 
-const randomNumbers = new Array(5);
+const randomNumbers = Array.from({length: 5}, () => Math.floor(Math.random() * 10));
 
-let sum = 0;
+const sum = randomNumbers.reduce((acc, curr) => acc + curr, 0);
 
-for (let i = 0; i < 5; i++) {
+const minNumber = Math.min(...randomNumbers);
 
-    randomNumbers[i] = Math.floor(Math.random() * (9 - 0 + 1)) + 0;
-
-    sum += randomNumbers[i]
-}
+const hasNumber3 = randomNumbers.includes(3);
 
 console.log(`Массив рандомных чисел => ${randomNumbers}`);
 
 console.log(`Сумма массива => ${sum}`);
 
-console.log(`Минимальное число => ${Math.min.apply(null, randomNumbers)}`);
+console.log(`Минимальное число => ${minNumber}`);
 
-console.log(`Есть ли цифра 3 в массиве => ${randomNumbers.includes(3)}`);
+console.log(`Есть ли цифра 3 в массиве => ${hasNumber3}`);
 
 
 
